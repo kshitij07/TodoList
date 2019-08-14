@@ -1,0 +1,15 @@
+<h1 mat-dialog-title>Edit Task</h1>
+<div mat-dialog-content>
+  <!-- <mat-form-field>
+    <input matInput [(ngModel)]="data.title">
+  </mat-form-field> -->
+  <p>
+    <mat-form-field appearance="outline">
+      <input matInput [(ngModel)]="data.title" placeholder="Edit Task" class="edit">
+    </mat-form-field>
+  </p>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()" class="del">No Thanks</button>
+  <button mat-button [mat-dialog-close]="data.title" cdkFocusInitial class="update">Ok</button>
+</div>
